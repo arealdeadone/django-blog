@@ -5,7 +5,8 @@ from django.contrib.auth.decorators import login_required
 
 
 def register(request):
-    if hasattr(request.user, 'profile'):
+
+    if request.user.is_authenticated:
         return redirect('blog-home')
 
     if request.method == 'POST':

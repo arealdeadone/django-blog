@@ -1,6 +1,13 @@
 {% extends "blog/base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
+    {% if user.is_authenticated %}
+        <script>
+            (function (window) {
+                window.location.href = '/';
+            })(window);
+        </script>
+    {% endif %}
     <div class="content-section">
         <form method="POST">
             {% csrf_token %}
