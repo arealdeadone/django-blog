@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css" rel="stylesheet"/>
     <link rel="stylesheet" href="{% static 'blog/main.css' %}">
-    <link rel="stylesheet" href="{% static 'chat/main.css' %}" />
 
 
     {% if title %}
@@ -21,9 +20,11 @@
 </head>
 <body>
     <header class="site-header">
-      <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+      <nav class="navbar navbar-expand-md navbar-light fixed-top">
         <div class="container">
-          <a class="navbar-brand mr-4" href="{% url 'blog-home' %}">TrueSaviour Blog</a>
+          <a class="navbar-brand mr-4 mt-2" href="{% url 'blog-home' %}">
+              <img src="/media/images/logo-01.png" class="img-fluid" width="190px" height="40px"/>
+          </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
           </button>
@@ -31,6 +32,8 @@
             <div class="navbar-nav mr-auto">
               <a class="nav-item nav-link" href="{% url 'blog-home' %}">Home</a>
               <a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>
+                <a class="nav-item nav-link" href="{% url 'counsellors' %}">Counsellors</a>
+                <a class="nav-item nav-link" href="#">Messages</a>
             </div>
             <!-- Navbar Right Side -->
             <div class="navbar-nav">

@@ -1,0 +1,16 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+    {% for profile in counsellors %}
+        <article class="media content-section">
+            <img src="{{ profile.image.url }}" class="rounded-circle article-img" alt="Profile Pic"/>
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="javascript:void(0)">{{ profile.user.username }}</a>
+            </div>
+            <h2><a class="article-title" href="#">{{ profile.user.first_name }} {{ profile.user.last_name }}</a></h2>
+            <p class="article-content">{{ profile.bio }}</p>
+              <div class="article-content">Fee - {{ profile.user.counsellordetails.fee }} <br> Response Time - {{ profile.user.counsellordetails.turn_around_time }}hrs</div>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock %}

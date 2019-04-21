@@ -31,7 +31,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'chat',
     'users.apps.UsersConfig',
     'crispy_forms',
     'blog.apps.BlogConfig',
@@ -40,8 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'channels',
+    'django.contrib.staticfiles'
 ]
 
 MIDDLEWARE = [
@@ -73,7 +71,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'learndjango.wsgi.application'
-ASGI_APPLICATION = 'learndjango.routing.application'
 
 
 # Database
